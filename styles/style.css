@@ -28,3 +28,22 @@ li,
 figure {
   margin: 0;
 }
+
+.page {
+  background-color: var(--bg-color, #F3EFEC);
+  color: var(--text-color, #312A4E);
+  font-family: var(--main-font, Helvetica, Arial, sans-serif);
+}
+
+.heading {
+  font-family: var(--accent-font, TimesNewRoman, "Times New Roman", Times, Georgia, serif);
+  line-height: 90%;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: top;
+}
+
+.content-section {
+  padding-inline-start: 5vi;
+  padding-inline-end: 5vi;
+}
