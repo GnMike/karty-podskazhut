@@ -35,6 +35,10 @@ figure {
   font-family: var(--main-font, Helvetica, Arial, sans-serif);
 }
 
+.header {
+  padding-block-start: 10%;
+}
+
 .heading {
   font-family: var(--accent-font, TimesNewRoman, "Times New Roman", Times, Georgia, serif);
   line-height: 90%;
@@ -43,7 +47,18 @@ figure {
   vertical-align: top;
 }
 
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-block-end: 40px;
+}
+
 .content-section {
   padding-inline-start: 5vi;
   padding-inline-end: 5vi;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-block-start: 7%;
+  margin-block-end: 2.5%;
 }
