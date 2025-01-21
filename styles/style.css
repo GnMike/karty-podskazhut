@@ -27,6 +27,7 @@ ol,
 li,
 figure {
   margin: 0;
+  padding: 0;
 }
 
 .page {
@@ -73,4 +74,32 @@ figure {
 
 .content__paragraph a {
   color: inherit;
+}
+
+.content__blockquote {
+  inline-size: 75%;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 200%;
+  padding-block-end: 1.5em;
+}
+
+.content__list {
+  list-style: none;
+  padding-inline-start: 40px;
+  position: relative;
+}
+
+.content__list::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-start: 15px;
+  inline-size: 15px;
+  block-size: 15px;
+  background: url("../images/marker-light.svg") no-repeat center / cover;
+}
+
+.content__list:not(:last-child) {
+  padding-block-end: 10px;
 }
