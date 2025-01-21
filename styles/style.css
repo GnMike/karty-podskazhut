@@ -62,3 +62,15 @@ figure {
   margin-block-start: 7%;
   margin-block-end: 2.5%;
 }
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  padding-block-end: 1.5em;
+}
+
+.content__paragraph a {
+  color: inherit;
+}
