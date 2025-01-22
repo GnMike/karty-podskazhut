@@ -113,3 +113,21 @@ figure {
   margin-inline-end: 5px;
 }
 
+.content__figure {
+  margin-block-start: 7%;
+  margin-block-end: 7%;
+  inline-size: calc(100% + 10vi);
+  position: relative;
+  margin-inline-start: -5vi;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__picture-caption {
+  padding-block-start: 20px;
+  padding-block-end: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
