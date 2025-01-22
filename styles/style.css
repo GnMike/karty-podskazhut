@@ -108,7 +108,7 @@ figure {
   display: inline-block;
   font-size: 30px;
   font-weight: 700;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   padding: 0 4px;
   margin-inline-end: 5px;
 }
@@ -129,5 +129,42 @@ figure {
   padding-block-start: 20px;
   padding-block-end: 20px;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text-color, #312A4E);
+}
+
+.content__card {
+  margin-block-start: 7%;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--text-color, #312A4E);
+}
+
+.content__card-title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 90%;
+}
+
+.colored-text {
+  display: inline-block;
+  position: relative;
+}
+
+.colored-text::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inline-size: calc(100% + 0.13em);
+  block-size: 0.25em;
+  inset-inline-start: -0.05em;
+  inset-block-end: 0.12em;
+  background-color: var(--accent-color, #FFAB6B);
+}
+
+.content__card-subtitle {
+  font-size: 18px;
 }
