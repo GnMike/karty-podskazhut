@@ -85,6 +85,10 @@ figure {
   cursor: pointer;
 }
 
+button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .header__theme-button_is-active {
   font-weight: 700;
 }
@@ -98,6 +102,10 @@ figure {
   inset-inline-start: 0.14em;
   inset-block-end: 0.22em;
   background-color: var(--accent-color, #FFAB6B);
+}
+
+.header__theme-button_is-active:disabled {
+  pointer-events: none;
 }
 
 .content-section {
@@ -121,6 +129,10 @@ figure {
 
 .content__paragraph a {
   color: inherit;
+}
+
+a:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 .content__blockquote {
