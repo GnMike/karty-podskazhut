@@ -36,6 +36,12 @@ figure {
   font-family: var(--main-font, Helvetica, Arial, sans-serif);
 }
 
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #B3B3B3;
+  --accent-color: transparent;
+}
+
 .header {
   padding-block-start: 10%;
 }
@@ -104,6 +110,17 @@ button:focus-visible {
   background-color: var(--accent-color, #FFAB6B);
 }
 
+.theme_dark .header__theme-button_is-active::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inline-size: calc(100% + 0.8em);
+  block-size: 0.5em;
+  inset-inline-start: -0.4em;
+  inset-block-end: 0.03em;
+  background-image: url("../images/pattern.svg");
+}
+
 .header__theme-button_is-active:disabled {
   pointer-events: none;
 }
@@ -159,6 +176,16 @@ a:focus-visible {
   background: url("../images/marker-light.svg") no-repeat center / cover;
 }
 
+.theme_dark .content__list::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-start: 15px;
+  inline-size: 15px;
+  block-size: 15px;
+  background: url("../images/marker-dark.svg") no-repeat center / cover;
+}
+
 .content__list:not(:last-child) {
   padding-block-end: 10px;
 }
@@ -170,6 +197,16 @@ a:focus-visible {
   background-color: var(--accent-color, #FFAB6B);
   padding: 0 4px;
   margin-inline-end: 5px;
+}
+
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  background-image: url("../images/pattern.svg");
+  padding: 0 4px;
+  margin-inline-end: 5px;
+  border: 1px solid currentColor;
 }
 
 .content__figure {
@@ -217,11 +254,22 @@ a:focus-visible {
   z-index: -1;
   content: "";
   position: absolute;
-  inline-size: calc(100% + 0.13em);
+  inline-size: calc(100% + 0.12em);
   block-size: 0.25em;
   inset-inline-start: -0.05em;
-  inset-block-end: 0.12em;
+  inset-block-end: 0.127em;
   background-color: var(--accent-color, #FFAB6B);
+}
+
+.theme_dark .colored-text::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inline-size: calc(100% + 0.12em);
+  block-size: 0.25em;
+  inset-inline-start: -0.05em;
+  inset-block-end: 0.127em;
+  background-image: url("../images/pattern.svg");
 }
 
 .content__card-subtitle {
