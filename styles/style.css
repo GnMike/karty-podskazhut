@@ -53,6 +53,53 @@ figure {
   margin-block-end: 40px;
 }
 
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-block-start: 1px solid var(--text-color, #312A4E);
+  border-block-end: 1px solid var(--text-color, #312A4E);
+}
+
+.header__theme-toggler {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  column-gap: 8px;
+}
+
+.header__theme-button {
+  font-family: inherit;
+  color: currentColor;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - 0.2em);
+  block-size: 0.35em;
+  inset-inline-start: 0.14em;
+  inset-block-end: 0.22em;
+  background-color: var(--accent-color, #FFAB6B);
+}
+
 .content-section {
   padding-inline-start: 5vi;
   padding-inline-end: 5vi;
