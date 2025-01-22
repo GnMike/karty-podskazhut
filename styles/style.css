@@ -227,3 +227,15 @@ a:focus-visible {
 .content__card-subtitle {
   font-size: 18px;
 }
+
+.footer {
+  margin-block-start: 10%;
+  padding: 2.5%;
+  text-align: center;
+  border-block-start: 1px solid var(--text-color, #312A4E);
+}
+
+.footer__copyright {
+  font-size: 18px;
+  color: currentColor;
+}
