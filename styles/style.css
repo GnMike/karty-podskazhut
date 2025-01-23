@@ -4,6 +4,7 @@
   --accent-color: #FFAB6B;
   --main-font: Raleway;
   --accent-font: 'STIX Two Text';
+  --height-li: 100%;
 }
 
 *,
@@ -73,10 +74,11 @@ figure {
   display: flex;
   flex-direction: row;
   list-style: none;
-  column-gap: 8px;
+  column-gap: 20px;
 }
 
 .header__theme-button {
+  padding: 0;
   font-family: inherit;
   color: currentColor;
   font-size: 18px;
@@ -169,7 +171,8 @@ a:focus-visible {
 .content__list::before {
   content: "";
   position: absolute;
-  inset-block-start: 3px;
+  inset-block-start: calc( var(--height-li, 100%) / 2);
+  margin-block-start: -7.5px;
   inset-inline-start: 15px;
   inline-size: 15px;
   block-size: 15px;
@@ -179,7 +182,8 @@ a:focus-visible {
 .theme_dark .content__list::before {
   content: "";
   position: absolute;
-  inset-block-start: 3px;
+  inset-block-start: calc( var(--height-li, 100%) / 2);
+  margin-block-start: -7.5px;
   inset-inline-start: 15px;
   inline-size: 15px;
   block-size: 15px;
@@ -187,6 +191,7 @@ a:focus-visible {
 }
 
 .content__list:not(:last-child) {
+  --height-li: calc(100% - 10px);
   padding-block-end: 10px;
 }
 
@@ -224,6 +229,7 @@ a:focus-visible {
 .content__picture-caption {
   padding-block-start: 20px;
   padding-block-end: 20px;
+  font-size: 18px;
   text-align: center;
   border-bottom: 1px solid var(--text-color, #312A4E);
 }
